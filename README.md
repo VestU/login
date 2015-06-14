@@ -1,9 +1,11 @@
 # login
-"Passwordless" Login Implementation for VestU.com
+"Passwordless" Login Implementation for [Vestu.com](https://vestu.com/)
+
+[Deployed Codebase](https://logintest.vestu.com/)
 
 # About
 
-Our business is focused on teaching investing in an unbiased manner. To simplify logins and to limit the data we keep on our servers, we implemented "passwordless" login. The advantage is that the user only need to authenticate with their own email address. During login, the user is send a single use URL, that will log them into the system. In many ways it is like a password reset but without needing to remember yet another password.
+Our business is focused on teaching investing in an unbiased manner. To simplify logins and to limit the data we keep on our servers, we implemented "passwordless" login. The advantage is that the user only need to authenticate via their own email address. During login, the user is send a single use URL, that will log them into the system. In many ways it is identical to password reset but without needing to remember yet another password.
 
 # Setup
 
@@ -24,3 +26,5 @@ DynamoDB - You will need to setup 2 dynamodb tables both with "Primary Key Type"
 - Tokens (Hash Key = 'token')
 
 You will need to be able to send email within the app. The sendEmail method in server.js can use any email sending service or api. We implemented with SES.
+
+Unique issues or bugs discovered within login codebase or [example service](https://logintest.vestu.com/) will receive a free account at [Vestu.com](https://vestu.com/)
