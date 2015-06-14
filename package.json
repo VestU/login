@@ -8,11 +8,15 @@
   },
   "author": "Ted Patrick <ted@vestu.com> (https://vestu.com/)",
   "license": "ISC",
+  "repository" :{
+    "type" : "git"
+  , "url" : "https://github.com/VestU/login.git"
+  },
   "dependencies": {
-    "aws-sdk": "^2.1.23",
-    "handlebars": "^3.0.1",
-    "hapi": "^8.4.0",
-    "joi": "^6.1.1",
-    "vogels": "^2.0.0-rc9"
+    "aws-sdk": "2.1.23",
+    "handlebars": "3.0.3",
+    "hapi": "8.6.1",
+    "joi": "6.4.3",
+    "vogels": "2.0.0-rc9"
   }
 }
