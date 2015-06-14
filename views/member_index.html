@@ -1,0 +1,47 @@
+{{> header}}
+    <!-- Main -->
+    <article id="main">
+        <header>
+            <h1>You are logged in.</h1>
+            <p>Thanks for testing the VestU.com login.</p>
+        </header>
+        <div class="container">
+            <p>At VestU.com we want our members to be in full control of their data. By limiting what we store on our servers, by implmenting "passwordless" login, by not sharing data with 3rd paries, by not supporting ads/partnerships/referrals, we gain member trust and remain "unbiased".</p>
+            <p>We would also love to help you get a better return on your investments. <a href="https://vestu.com">Learn to invest!</a>
+            
+            <section>
+                <label for="email">Newsletter Subscription</label>
+                <div class="row">
+                    <form style="display:inline-block" action="https://newsletter.vestu.com/subscribe" method="POST" accept-charset="utf-8">
+                        <div class="6u 12u$(mobile)">
+                                <input type="hidden" class="fit" name="email" id="email" value="{{email}}"/>
+                                <input type="hidden" name="list" value="1TElp2wUZOKoDXJqI6PiNQ"/>
+                                <input type="submit" class="fit" value="Subscribe" id="submit"/>
+                        </div>
+                    </form>
+                    <form action="https://newsletter.vestu.com/unsubscribe" method="POST" accept-charset="utf-8">
+                        <div class="6u 12u$(mobile)">
+                            <input type="hidden" class="fit" name="email" id="email" value="{{email}}"/>
+                            <input type="hidden" name="list" value="1TElp2wUZOKoDXJqI6PiNQ"/>
+                            <input type="submit" class="fit" value="Unsubscribe" id="submit"/>
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <section>
+                <label for="email">Account Deletion</label>
+                <span>Enter email to confirm account deletion</span>
+                <form action="/delete" method="POST" accept-charset="utf-8">
+                    <div class="row">
+                        <div class="6u 12u(mobile)">
+                            <input type="text" class="fit" name="email" id="email" placeholder="{{email}}"/>
+                        </div>
+                        <div class="6u 12u(mobile)">
+                            <input type="submit" class="fit special" value="Delete Account" id="submit"/>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </article>
+
+{{> footer}}

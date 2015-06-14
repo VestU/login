@@ -1,0 +1,109 @@
+        <!-- Footer -->
+        <div id="footer">
+            <section class="container">
+                <h2>VestU. Investing in Yourself.</h2>
+                <p><strong>Nobody cares about your money as much as you.</strong> At VestU we provide clear, unbiased<br />
+                investment education and funded portfolios to empower individual investors.</p>
+                <footer>
+                    <ul class="actions">
+                        <li><a href="https://vestu.com" class="button">Subscribe</a></li>
+                        <li><span class="conjunction">&ndash; or &ndash;</span></li>
+                        <li><a href="https://vestu.com" class="button alt">Learn More</a></li>
+                    </ul>
+                </footer>
+                <span class="copyright">&copy; VestU LLC</span>
+            </section>
+        </div>
+
+        <!-- Menu Panel - MEMBER -->
+        {{#if email}}
+        <section id="menu-panel" class="panel">
+            <header>
+                <h2>VestU</h2>
+                <p>Investing in Yourself.</p>
+            </header>
+            <nav>
+                <ul>
+                    <li><a href="#">Courses<span>No courses published yet.</span></a></li>
+                    <li><a href="#">Portfolios<span>No portfolios published yet.</span></a></li>
+                    <li><a href="#">Webinars<span>No webinars published yet.</span></a></li>
+                    <li><a href="#">Articles<span>No articles published yet.</span></a></li>
+                    <li><a href="#">Bookmarks<span>No bookmarks published yet.</span></a></li>
+                </ul>
+            </nav>
+            <footer>
+                <ul class="menu">
+                    <li><a href="mailto:support@vestu.com">Support</a></li>
+                </ul>
+                <span class="copyright">&copy; VestU LLC</span>
+            </footer>
+            <span class="closer" data-action="toggleLayer" data-args="menu-panel"></span>
+        </section>
+        
+        <!-- Menu Panel - GUEST -->
+        {{else}}
+        <section id="menu-panel" class="panel">
+        </section>
+        {{/if}}
+
+        <!-- Login Panel - MEMBER -->
+        {{#if email}}
+        <section id="login-panel" class="panel">
+            <div class="inner">
+                <section>
+                    <h2>Account:</h2>
+                    <p>{{email}}</p>
+                </section>
+                <section>
+                    <form method="post" action="/logout">
+                        <div class="row uniform 50%">
+                            <div class="12u$">
+                                <input type="submit" class="fit" value="logout" />
+                            </div>
+                        </div>
+                    </form>
+                </section>
+                <span class="closer" data-action="toggleLayer" data-args="login-panel"></span>
+            </div>
+        </section>
+        
+        <!-- Login Panel - GUEST -->
+        {{else}}
+        <section id="login-panel" class="panel">
+            <div class="inner">
+                <section>
+                    <h2>Login</h2>
+                    <form method="post" action="/login">
+                        <div class="row uniform 50%">
+                            <div class="12u$">
+                                <input type="email" name="email" placeholder="Email" />
+                            </div>
+                            <div class="12u$">
+                                <input type="submit" class="fit" value="Login" />
+                            </div>
+                        </div>
+                    </form>
+                </section>
+            <span class="closer" data-action="toggleLayer" data-args="login-panel"></span>
+            </div>
+        </section>
+        {{/if}}
+
+        <!-- Scripts -->
+        <script src="/assets/js/jquery.min.js"></script>
+        <script src="/assets/js/skel.min.js"></script>
+        <script src="/assets/js/init.js"></script>
+
+        {{#if analytics}}
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+          ga('create', 'UA-49241782-3', 'auto');
+          ga('send', 'pageview');
+        </script>
+        {{/if}}
+
+    </body>
+</html>
