@@ -225,7 +225,7 @@ require( './routes/errors.js' )();
 require( './routes/assets.js' )();
 
 // /errors routes
-require( './routes/errors.js' )();
+require( './routes/misc.js' )();
 
 
 
