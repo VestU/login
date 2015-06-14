@@ -1,7 +1,7 @@
 # login
 "Passwordless" Login Implementation for [Vestu.com](https://vestu.com/)
 
-[Deployed Codebase](https://logintest.vestu.com/)
+["Live" Deployed Codebase (Feel free to "Login")](https://logintest.vestu.com/)
 
 # About
 
