@@ -11,13 +11,13 @@ Login has service dependencies in AWS(SES & DYNAMODB) and can easily be deployed
 
 All service dependencies are determined by environmental variables as follows:
 
-ENVIRONMENT = "PROD" or "LOCAL";
-SECRET = "PASSPHASE TO ENCRYPT COOKIES";
-AWS_KEY = Your AWS IAM KEY
-AWS_SECRET = Your AWS IAM SECRET;
-AWS_REGION = "us-west-2" //Depending on service deployment
-USERS_TABLE_NAME = Name of DynamoDB Users Table;
-TOKENS_TABLE_NAME = Name of DynamoDB Tokens Table;
+- ENVIRONMENT - "PROD" or "LOCAL";
+- SECRET - Passphrase to encrypt cookies via Iron;
+- AWS_KEY - Your AWS IAM KEY
+- AWS_SECRET - Your AWS IAM SECRET;
+- AWS_REGION - "us-west-2" //Depending on service deployment
+- USERS_TABLE_NAME - Name of DynamoDB Users Table;
+- TOKENS_TABLE_NAME - Name of DynamoDB Tokens Table;
 
 DynamoDB - You will need to setup 2 dynamodb tables both with "Primary Key Type" of 'Hash' like so:
 - Users (Hash Key = 'email')
