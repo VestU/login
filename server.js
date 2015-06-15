@@ -45,7 +45,7 @@ vu.server.views({
     engines: {
         html: vu.Handlebars
     },
-    isCached: ( vu.env.ENVIRONMENT == 'PROD' ),
+    isCached: ( vu.env.ENVIRONMENT === 'PROD' ),
     context: vu.defaultContext,
     path: 'views',
     partialsPath: 'views/partials',
@@ -54,7 +54,7 @@ vu.server.views({
 //COOKIE CONFIG
 vu.server.state( 'service' , {
     ttl: 7884000000,
-    isSecure: ( vu.env.ENVIRONMENT == 'PROD' ),
+    isSecure: ( vu.env.ENVIRONMENT === 'PROD' ),
     path: "/",
     isHttpOnly: true,
     encoding: 'iron',
@@ -65,7 +65,7 @@ vu.server.state( 'service' , {
 
 vu.server.state( 'session' , {
     ttl: null,
-    isSecure: ( vu.env.ENVIRONMENT == 'PROD' ),
+    isSecure: ( vu.env.ENVIRONMENT === 'PROD' ),
     path: "/",
     isHttpOnly: true,
     encoding: 'iron',
@@ -75,7 +75,7 @@ vu.server.state( 'session' , {
 });
 
 //FORCE HTTP in PROD
-if( vu.env.ENVIRONMENT == 'PROD' ){
+if( vu.env.ENVIRONMENT === 'PROD' ){
     vu.server.ext( 'onRequest' , function ( request , reply ) {
         if( request.headers[ 'x-forwarded-proto' ] === 'http' ){
             return reply().redirect( 'https://' + request.headers.host + request.url.path ).code( 301 );
