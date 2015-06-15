@@ -45,7 +45,7 @@ vu.server.views({
     engines: {
         html: vu.Handlebars
     },
-    isCached: ( vu.env.ENVIRONMENT === true ),
+    isCached: ( vu.env.ENVIRONMENT == 'PROD' ),
     context: vu.defaultContext,
     path: 'views',
     partialsPath: 'views/partials',
