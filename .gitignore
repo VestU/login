@@ -7,6 +7,7 @@ pids
 *.seed
 
 build/Release
+deploy
 
 node_modules
 
