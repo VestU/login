@@ -1,8 +1,6 @@
 # Login
 "Passwordless" Login Implementation for [Vestu.com](https://vestu.com/)
 
-["Live" Deployed Codebase (Feel free to "Login")](https://logintest.vestu.com/)
-
 # About
 
 Our business is focused on teaching investing in an unbiased manner. To simplify logins and to limit the data we keep on our servers, we implemented "passwordless" login. The advantage is that the user only need to authenticate via their own email address. During login, the user is send a single use URL, that will log them into the system. In many ways it is identical to password reset but without needing to remember yet another password.
